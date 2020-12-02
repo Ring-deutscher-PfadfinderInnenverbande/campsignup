@@ -1,0 +1,78 @@
+html, body, #root {
+  height: 100%;
+}
+
+.pf-c-content blockquote {
+  color: black !important;
+}
+
+/* Fix message box offset */
+.pf-c-content h4:not(:first-child) {
+  margin-top: 0 !important;
+}
+
+@media screen {
+  .hideScreen {
+      display: none !important;
+  }
+}
+
+@media print {
+  select, input, textarea {
+    border-width: 0 !important;
+    background: none !important;
+  }
+
+  .pf-c-page {
+    display: block !important;
+  }
+
+  .pf-c-page__main {
+    max-width: 100% !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  .pf-c-content {
+    max-width: 100% !important;
+  }
+
+  .pf-c-form__group {
+    break-inside: avoid;
+    padding-top: 25px !important;
+  }
+
+  .pf-c-content > * {
+    display: block !important;
+  }
+
+  .breakBefore {
+    break-before: page;
+  }
+
+  .pf-c-card {
+    break-after: page;
+    box-shadow: none !important;
+  }
+
+  .pf-c-form__group > small {
+    display: none !important;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .hidePrint {
+    display: none !important;
+  }
+}
+
+.printBox {
+  padding: 1rem;
+  border-width: 2px;
+  border-style: dashed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
